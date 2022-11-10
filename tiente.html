@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: black;
+        }
+        fieldset{
+            height: 300px;
+            justify-content: center;
+        }
+        body {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h1>Chuyển đổi tiền</h1>
+        <form action="#" method="get">
+            <input type="number" size="10" id="amount" placeholder="Nhập số tiền vào đây">
+            <span>Chuyển</span>
+            <select name="fromcurrency" id="from">
+                <option value="VN">VND</option>
+                <option value="USD">USD</option>
+            </select>
+            <span>Sang</span>
+            <select name="tocurrency" id="to">
+                <option value="VN">VND</option>
+                <option value="USD">USD</option>
+            </select>
+            <button type="button" onclick="myFunction()">Convert</button>
+        </form>
+        <br><br>
+        <div id="result"></div>
+        <script>
+            function myFunction() {
+                let A = parseFloat(document.getElementById("amount").value)
+                let from = (document.getElementById("from").value)
+                let to = (document.getElementById("to").value)
+                if (from =="VN" && to == "USD") {
+                   document.getElementById("result").innerHTML= A / 24000 + "$"}
+                   else if (from =="USD" && to == "VN"){
+                    document.getElementById("result").innerHTML= A * 24000 + "VND"}
+                else {
+                    alert("Chọn lại loại tiền!!!")
+                }
+            }
+        </script>
+    </fieldset>   
+</body>
+</html>

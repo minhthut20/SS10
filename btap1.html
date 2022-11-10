@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Vatly=prompt("Nhập điểm Vật Lý");
+        let Hoahoc=prompt("Nhập điểm Hoá Hoạ");
+        let Sinhhoc=prompt("Nhập điểm Sinh Học");
+
+        let inputVatly=parseInt(Vatly);
+        let inputHoahoc=parseInt(Hoahoc);
+        let inputSinhhoc=parseInt(Sinhhoc);
+
+        let Tong=inputVatly+inputHoahoc+inputSinhhoc;
+        document.write("Tổng Điểm là : "+ Tong);
+
+        document.write("<br>");
+
+        let Tongtrungbinh=(inputVatly+inputHoahoc+inputSinhhoc)/3;
+        document.write("Điểm trung bình : "+Tongtrungbinh);
+    </script>
+</body>
+</html>
